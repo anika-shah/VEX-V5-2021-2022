@@ -27,9 +27,12 @@ void Turn(int Velocity, double Time, vex::turnType dir) {
   wait(1, seconds);
 }
 
-
+/*
+This function turns the robot by the provided amount of degrees in the provided direction
+*/
 void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   Inertial.setHeading(0, degrees);
+
   if (dir == right) {
     Brain.Screen.print(Inertial.heading(degrees));
     FrontL_DT.spinFor(forward, 2000, degrees, false);
@@ -50,7 +53,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   }
   else if (dir == left) {
     // Turn left by spinning the RightMotor forward and the LeftMotor reverse.
-
     Brain.Screen.print(Inertial.heading(degrees));
     Brain.Screen.print("***");
     FrontL_DT.spinFor(reverse, 2000, degrees, false);
@@ -74,10 +76,5 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
     FrontR_DT.stop();
     BackL_DT.stop();
     BackR_DT.stop();
-
-
   }
-
-  
-
 }
