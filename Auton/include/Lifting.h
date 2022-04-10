@@ -1,0 +1,1 @@
+void Lift(int Velocity, double Time, vex::directionType dir);
