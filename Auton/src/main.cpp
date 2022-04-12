@@ -62,7 +62,7 @@ void pre_auton(void) {
 
 void autonomous(void) {
 
-  Brain.Screen.print("Hello");
+  Brain.Screen.print("Hello 938J");
   // Calibrate the Gyro, and wait for it to finish.
   Inertial.calibrate();
   waitUntil(!Inertial.isCalibrating());
@@ -77,7 +77,7 @@ void autonomous(void) {
   FrontR_DT.setVelocity(50, percent);
   BackL_DT.setVelocity(50, percent);
   BackR_DT.setVelocity(50, percent);
-
+  
   //Step 1: Go forward to push the blue goal into the other side
   MoveStraight(2500, forward);
 
@@ -85,51 +85,59 @@ void autonomous(void) {
   MoveStraight(1850, reverse);
 
   //Turn left 90 degrees
-  TurnUsingGyro(76, left);
+  TurnUsingGyro(84, left);
   
   //Go forward
-  MoveStraight(550, forward);
+  MoveStraight(625, forward);
   
   //Turn right 90 degrees the face the first yellow goal
-  TurnUsingGyro(70, right);
+  TurnUsingGyro(85, right);
   
-  
+
   //Step 2: Go forward 1700 degrees forward to push the yellow goal to the other side
   MoveStraight(1700, forward);
   
   //Step 2: Come back
   MoveStraight(1500, reverse);
-
-  TurnUsingGyro(73, left);
+  
+  TurnUsingGyro(82, left);
   
   //Go forward
-  MoveStraight(900, forward);
+  MoveStraight(930, forward);
   
   //Turn right 90 degrees the face the first yellow goal
-  TurnUsingGyro(69, right);
+  TurnUsingGyro(83, right);
+
   
   //Step 3: Go forward 1700 degrees forward to push the yellow goal to the other side
-  MoveStraight(1700, forward);
-  /*
-  //Step 3: Come back
-  MoveStraight(200, reverse);
+  MoveStraight(1750, forward);
 
+  //Step 3: Come back
+  MoveStraight(155, reverse);
+  
   //Turn left 90 degrees
-  TurnUsingGyro(90, left);
+
+  TurnUsingGyro(80, left);
 
   //Go forward
-  MoveStraight(550, forward);
-
+  MoveStraight(970, forward);
+  
   //Turn left 90 degrees
-  TurnUsingGyro(90, left);
+  TurnUsingGyro(83, left);
 
   //Go forward to push the third yellow goal to the other side
-  MoveStraight(1600, forward);
+  MoveStraight(1160, forward);
 
-  */
+  //Go backward
+  MoveStraight(2450, reverse);
 
+  //Turn to face red goal
+  TurnUsingGyro(83, right);
+
+  //MoveStraight(1500, forward);
+  //wait(1, seconds);
+  //TurnUsingGyro(90, left);
 }
-
 
 
 /*---------------------------------------------------------------------------*/

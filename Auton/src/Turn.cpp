@@ -31,50 +31,77 @@ void Turn(int Velocity, double Time, vex::turnType dir) {
 This function turns the robot by the provided amount of degrees in the provided direction
 */
 void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
-  Inertial.setHeading(0, degrees);
+
+  FrontL_DT.setVelocity(15, percent);
+  FrontR_DT.setVelocity(15, percent);
+  BackL_DT.setVelocity(15, percent);
+  BackR_DT.setVelocity(15, percent);
+
+  Brain.Screen.print("Before:");
+  Brain.Screen.print(Inertial.heading(degrees));
 
   if (dir == right) {
-    Brain.Screen.print(Inertial.heading(degrees));
     FrontL_DT.spinFor(forward, 2000, degrees, false);
     FrontR_DT.spinFor(reverse, 2000, degrees, false);
     BackL_DT.spinFor(forward, 2000, degrees, false);
     BackR_DT.spinFor(reverse, 2000, degrees, false);
-  
-    while  (Inertial.heading(degrees) <= numOfDegrees) {
-      wait(0.05, seconds);
+
+    float target = Inertial.heading(degrees) + numOfDegrees;
+    if(target >= 360)
+    {
+      target = target-360;
+    }
+    Brain.Screen.print("Target:");
+    Brain.Screen.print(target);
+
+    while (true)
+    {
+      wait(0.01, seconds);
+      if (Inertial.heading(degrees) > target-1 && Inertial.heading(degrees) < target+1)
+      {
+          break;
+      }
     }
 
+    Brain.Screen.print("After:");
     Brain.Screen.print(Inertial.heading(degrees));
-    FrontL_DT.stop();
-    FrontR_DT.stop();
-    BackL_DT.stop();
-    BackR_DT.stop();
-
   }
   else if (dir == left) {
-    // Turn left by spinning the RightMotor forward and the LeftMotor reverse.
-    Brain.Screen.print(Inertial.heading(degrees));
-    Brain.Screen.print("***");
     FrontL_DT.spinFor(reverse, 2000, degrees, false);
     FrontR_DT.spinFor(forward, 2000, degrees, false);
     BackL_DT.spinFor(reverse, 2000, degrees, false);
     BackR_DT.spinFor(forward, 2000, degrees, false);
 
-    wait(0.5, seconds);
+    wait(0.2, seconds);
 
-    // Wait until the Gyro's heading is greater than x degrees.
-     while  (Inertial.heading(degrees) >= 360 - numOfDegrees) {
-      wait(0.05, seconds);
-      
+    //Setting the target
+    float target = Inertial.heading(degrees) - numOfDegrees;
+    if (target < 0)
+    {
+      target = target + 360;
     }
+    Brain.Screen.print("Target:");
+    Brain.Screen.print(target);
 
+    while (true)
+    {
+      wait(0.01, seconds);
+      if (Inertial.heading(degrees) > target-1 && Inertial.heading(degrees) < target+1)
+      {
+          break;
+      }
+    }
+    Brain.Screen.print("After:");
     Brain.Screen.print(Inertial.heading(degrees));
-    Brain.Screen.print("***");
-
-    // Stop both motors.
-    FrontL_DT.stop();
-    FrontR_DT.stop();
-    BackL_DT.stop();
-    BackR_DT.stop();
   }
+
+  FrontL_DT.stop();
+  FrontR_DT.stop();
+  BackL_DT.stop();
+  BackR_DT.stop();
+
+  FrontL_DT.setVelocity(50, percent);
+  FrontR_DT.setVelocity(50, percent);
+  BackL_DT.setVelocity(50, percent);
+  BackR_DT.setVelocity(50, percent);
 }
