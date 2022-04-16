@@ -12,6 +12,7 @@ extern controller Controller1;
 extern inertial Inertial;
 extern motor Forklift_Hook;
 extern motor BackForklift_L;
+extern motor BackForklift_R;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.
