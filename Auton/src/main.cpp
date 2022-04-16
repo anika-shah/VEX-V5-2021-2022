@@ -85,70 +85,72 @@ void autonomous(void) {
   MoveStraight(1850, reverse);
 
   //Turn left 90 degrees
-  TurnUsingGyro(84, left);
+  //TurnUsingGyro(84, left);
+  TurnToTarget(278);
   
   //Go forward
   MoveStraight(625, forward);
   
   //Turn right 90 degrees the face the first yellow goal
-  TurnUsingGyro(87, right);
+  TurnToTarget(357);
   
-
+  
   //Step 2: Go forward 1700 degrees forward to push the yellow goal to the other side
   MoveStraight(1700, forward);
   
   //Step 2: Come back
-  MoveStraight(1500, reverse);
+  MoveStraight(1530, reverse);
   
   //Turn left
-  TurnUsingGyro(82, left);
+  TurnToTarget(278);
   
   //Go forward
-  MoveStraight(930, forward);
+  MoveStraight(947, forward);
   
   //Turn right 90 degrees the face the second yellow goal
-  TurnUsingGyro(83, right);
+  TurnToTarget(357);
 
   
   //Step 3: Go forward 1700 degrees forward to push the second yellow goal to the other side
-  MoveStraight(1750, forward);
+  MoveStraight(1690, forward);
 
   //Step 3: Come back
-  MoveStraight(155, reverse);
+  MoveStraight(140, reverse);
   
   //Turn left 90 degrees
-  TurnUsingGyro(80, left);
-
+  TurnToTarget(278);
+  
   //Go forward to align with third yellow goal
-  MoveStraight(975, forward);
+  MoveStraight(1000, forward);
   
   //Turn left 90 degrees
-  TurnUsingGyro(83, left);
-
+  TurnToTarget(185);
+  
   //Go forward to push the third yellow goal to the other side
   MoveStraight(1160, forward);
 
   //Go backward
-  MoveStraight(1485, reverse);
+  MoveStraight(1510, reverse);
 
   //Turn to face red goal
-  TurnUsingGyro(85, right);
-  /*
-  //STep 4: Move backward to give space for the forklift
+  TurnToTarget(265);
+  
+  //Step 4: Move backward to give space for the forklift
   MoveStraight(75, reverse);
-
+  
   //Step 4: Lower Forklift 
   BackForklift_L.setVelocity(100, percent);
+  
   BackForklift_L.spinFor(forward, 600, degrees);
   BackForklift_L.setVelocity(20, percent);
-
+/*
   //Move forward to pick up the goal
   MoveStraight(225, forward);
 
   //Lift forklift with red goal
   //BackForklift_L.spinFor(reverse, 650, degrees);
   //BackForklift_R.spinFor(reverse, 610, degrees);
-  */
+  *//*
   Brain.Screen.print(Inertial.heading(degrees));
   //Adjusting robot's angle to directly face the red goal
   float current = Inertial.heading(degrees);
@@ -162,7 +164,7 @@ void autonomous(void) {
   Brain.Screen.print(Inertial.heading(degrees));
 
 
-/*
+
   //Step 4: Go forward to align with red goal
   MoveStraight(775, forward);
 

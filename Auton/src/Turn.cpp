@@ -1,32 +1,5 @@
 #include "vex.h"
 
-void Turn(int Velocity, double Time, vex::turnType dir) {
-
-  FrontL_DT.setVelocity(Velocity, percent);
-  FrontR_DT.setVelocity(Velocity, percent);
-  BackL_DT.setVelocity(Velocity, percent);
-  BackR_DT.setVelocity(Velocity, percent);
-
-  if (dir == right) {
-    FrontL_DT.spin(forward);
-    BackL_DT.spin(forward);
-    FrontR_DT.spin(reverse);
-    BackR_DT.spin(reverse);
-  }
-    else if (dir == left) {
-    FrontL_DT.spin(reverse);
-    BackL_DT.spin(reverse);
-    FrontR_DT.spin(forward);
-    BackR_DT.spin(forward);
-  }
-  wait(Time, seconds);
-  FrontL_DT.stop();
-  FrontR_DT.stop();
-  BackL_DT.stop();
-  BackR_DT.stop();
-  wait(1, seconds);
-}
-
 /*
 This function turns the robot by the provided amount of degrees in the provided direction
 */
@@ -36,8 +9,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   FrontR_DT.setVelocity(15, percent);
   BackL_DT.setVelocity(15, percent);
   BackR_DT.setVelocity(15, percent);
-
-
 
   if (dir == right) {
     FrontL_DT.spinFor(forward, 2000, degrees, false);
@@ -94,4 +65,28 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   FrontR_DT.setVelocity(50, percent);
   BackL_DT.setVelocity(50, percent);
   BackR_DT.setVelocity(50, percent);
+}
+
+void TurnToTarget(float target) {
+  float current = Inertial.heading(degrees);
+  float x = target-current;
+  Brain.Screen.print(Inertial.heading(degrees));
+
+  if (x > 0) {
+    if (x <= 180) {
+      TurnUsingGyro(x, right);
+    }
+    else if (x > 180) {
+      TurnUsingGyro(360 - x, left);
+    }
+  }
+  else if (x < 0) {
+    if (x < -180) {
+      TurnUsingGyro(360 + x, right);
+    }
+    else if (x > -180) {
+      TurnUsingGyro(-x, left);
+    }
+  }
+  Brain.Screen.print(Inertial.heading(degrees));
 }
