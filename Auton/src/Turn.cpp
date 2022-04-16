@@ -37,8 +37,7 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   BackL_DT.setVelocity(15, percent);
   BackR_DT.setVelocity(15, percent);
 
-  Brain.Screen.print("Before:");
-  Brain.Screen.print(Inertial.heading(degrees));
+
 
   if (dir == right) {
     FrontL_DT.spinFor(forward, 2000, degrees, false);
@@ -51,8 +50,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
     {
       target = target-360;
     }
-    Brain.Screen.print("Target:");
-    Brain.Screen.print(target);
 
     while (true)
     {
@@ -62,9 +59,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
           break;
       }
     }
-
-    Brain.Screen.print("After:");
-    Brain.Screen.print(Inertial.heading(degrees));
   }
   else if (dir == left) {
     FrontL_DT.spinFor(reverse, 2000, degrees, false);
@@ -80,8 +74,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
     {
       target = target + 360;
     }
-    Brain.Screen.print("Target:");
-    Brain.Screen.print(target);
 
     while (true)
     {
@@ -91,8 +83,6 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
           break;
       }
     }
-    Brain.Screen.print("After:");
-    Brain.Screen.print(Inertial.heading(degrees));
   }
 
   FrontL_DT.stop();

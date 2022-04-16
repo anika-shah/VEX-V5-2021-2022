@@ -91,7 +91,7 @@ void autonomous(void) {
   MoveStraight(625, forward);
   
   //Turn right 90 degrees the face the first yellow goal
-  TurnUsingGyro(85, right);
+  TurnUsingGyro(87, right);
   
 
   //Step 2: Go forward 1700 degrees forward to push the yellow goal to the other side
@@ -100,27 +100,27 @@ void autonomous(void) {
   //Step 2: Come back
   MoveStraight(1500, reverse);
   
+  //Turn left
   TurnUsingGyro(82, left);
   
   //Go forward
   MoveStraight(930, forward);
   
-  //Turn right 90 degrees the face the first yellow goal
+  //Turn right 90 degrees the face the second yellow goal
   TurnUsingGyro(83, right);
 
   
-  //Step 3: Go forward 1700 degrees forward to push the yellow goal to the other side
+  //Step 3: Go forward 1700 degrees forward to push the second yellow goal to the other side
   MoveStraight(1750, forward);
 
   //Step 3: Come back
   MoveStraight(155, reverse);
   
   //Turn left 90 degrees
-
   TurnUsingGyro(80, left);
 
-  //Go forward
-  MoveStraight(970, forward);
+  //Go forward to align with third yellow goal
+  MoveStraight(975, forward);
   
   //Turn left 90 degrees
   TurnUsingGyro(83, left);
@@ -129,14 +129,36 @@ void autonomous(void) {
   MoveStraight(1160, forward);
 
   //Go backward
-  MoveStraight(2450, reverse);
+  MoveStraight(1425, reverse);
 
   //Turn to face red goal
-  TurnUsingGyro(83, right);
+  TurnUsingGyro(85, right);
 
-  //MoveStraight(1500, forward);
-  //wait(1, seconds);
-  //TurnUsingGyro(90, left);
+  //STep 4: Move backward to give space for the forklift
+  MoveStraight(75, reverse);
+
+  //Step 4: Lower Forklift 
+  BackForklift_L.setVelocity(100, percent);
+  BackForklift_L.spinFor(forward, 600, degrees);
+  BackForklift_L.setVelocity(20, percent);
+
+  //Move forward to pick up the goal
+  MoveStraight(225, forward);
+
+  //Lift forklift with red goal
+  BackForklift_L.spinFor(reverse, 610, degrees);
+  Brain.Screen.print(Inertial.heading(degrees));
+
+/*
+  //Step 4: Go forward to align with red goal
+  MoveStraight(775, forward);
+
+  //Step 4: Go Backward to get in alignment with red goal
+  MoveStraight(25,reverse);
+
+  //Turn left to face red goal
+  TurnUsingGyro(87, left);
+  */
 }
 
 
