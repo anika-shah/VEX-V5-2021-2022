@@ -129,11 +129,11 @@ void autonomous(void) {
   MoveStraight(1160, forward);
 
   //Go backward
-  MoveStraight(1425, reverse);
+  MoveStraight(1485, reverse);
 
   //Turn to face red goal
   TurnUsingGyro(85, right);
-
+  /*
   //STep 4: Move backward to give space for the forklift
   MoveStraight(75, reverse);
 
@@ -146,8 +146,21 @@ void autonomous(void) {
   MoveStraight(225, forward);
 
   //Lift forklift with red goal
-  BackForklift_L.spinFor(reverse, 610, degrees);
+  //BackForklift_L.spinFor(reverse, 650, degrees);
+  //BackForklift_R.spinFor(reverse, 610, degrees);
+  */
   Brain.Screen.print(Inertial.heading(degrees));
+  //Adjusting robot's angle to directly face the red goal
+  float current = Inertial.heading(degrees);
+  if (current < 270) {
+    TurnUsingGyro(270-current, right);
+  }
+  else if(current > 270) {
+    TurnUsingGyro(current-270, left);
+  } 
+
+  Brain.Screen.print(Inertial.heading(degrees));
+
 
 /*
   //Step 4: Go forward to align with red goal
