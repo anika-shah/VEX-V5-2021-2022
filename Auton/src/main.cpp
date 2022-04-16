@@ -1,3 +1,59 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         11              
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      4               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         11              
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      4               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         11              
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      4               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         11              
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      4               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
@@ -24,6 +80,7 @@
 #include "vex.h"
 #include "Moving.h"
 #include "Turn.h"
+#include "FrontLifting.h"
 
 using namespace vex;
 
@@ -77,7 +134,10 @@ void autonomous(void) {
   FrontR_DT.setVelocity(50, percent);
   BackL_DT.setVelocity(50, percent);
   BackR_DT.setVelocity(50, percent);
-  
+
+  BackForklift_L.setMaxTorque(100, percent);
+  BackForklift_R.setMaxTorque(100, percent);
+
   //Step 1: Go forward to push the blue goal into the other side
   MoveStraight(2500, forward);
 
@@ -133,6 +193,7 @@ void autonomous(void) {
 
   //Turn to face red goal
   TurnUsingGyro(85, right);
+
   /*
   //STep 4: Move backward to give space for the forklift
   MoveStraight(75, reverse);
@@ -149,18 +210,25 @@ void autonomous(void) {
   //BackForklift_L.spinFor(reverse, 650, degrees);
   //BackForklift_R.spinFor(reverse, 610, degrees);
   */
+
   Brain.Screen.print(Inertial.heading(degrees));
   //Adjusting robot's angle to directly face the red goal
   float current = Inertial.heading(degrees);
   if (current < 270) {
     TurnUsingGyro(270-current, right);
-  }
+    }
   else if(current > 270) {
     TurnUsingGyro(current-270, left);
-  } 
+    } 
 
   Brain.Screen.print(Inertial.heading(degrees));
 
+
+  FrontLift(100, 600, forward);
+
+  MoveStraight(225,forward);
+ 
+  FrontLift(50, 610, reverse);
 
 /*
   //Step 4: Go forward to align with red goal

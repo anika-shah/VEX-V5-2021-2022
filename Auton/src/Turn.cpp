@@ -1,32 +1,5 @@
 #include "vex.h"
 
-void Turn(int Velocity, double Time, vex::turnType dir) {
-
-  FrontL_DT.setVelocity(Velocity, percent);
-  FrontR_DT.setVelocity(Velocity, percent);
-  BackL_DT.setVelocity(Velocity, percent);
-  BackR_DT.setVelocity(Velocity, percent);
-
-  if (dir == right) {
-    FrontL_DT.spin(forward);
-    BackL_DT.spin(forward);
-    FrontR_DT.spin(reverse);
-    BackR_DT.spin(reverse);
-  }
-    else if (dir == left) {
-    FrontL_DT.spin(reverse);
-    BackL_DT.spin(reverse);
-    FrontR_DT.spin(forward);
-    BackR_DT.spin(forward);
-  }
-  wait(Time, seconds);
-  FrontL_DT.stop();
-  FrontR_DT.stop();
-  BackL_DT.stop();
-  BackR_DT.stop();
-  wait(1, seconds);
-}
-
 /*
 This function turns the robot by the provided amount of degrees in the provided direction
 */
