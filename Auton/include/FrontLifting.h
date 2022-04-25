@@ -1,1 +1,1 @@
-void FrontLift(int Velocity, int numberOfDegrees, vex::directionType dir);
+void FrontLift(int Velocity, double Time, vex::directionType dir);

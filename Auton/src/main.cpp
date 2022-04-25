@@ -1,6 +1,188 @@
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      21              
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         10              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      9               
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         10              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         10              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         5               
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         3               
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         2               
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         20              
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         2               
+// BackL_DT             motor         14              
+// FrontL_DT            motor         8               
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         2               
+// BackL_DT             motor         14              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         4               
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// FrontR_DT            motor         11              
+// BackR_DT             motor         2               
+// BackL_DT             motor         10              
+// FrontL_DT            motor         20              
+// Forklift_L           motor         19              
+// Controller1          controller                    
+// Inertial             inertial      6               
+// Forklift_Hook        motor         13              
+// BackForklift_L       motor         18              
+// BackForklift_R       motor         12              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
 // FrontR_DT            motor         11              
 // BackR_DT             motor         2               
 // BackL_DT             motor         10              
@@ -204,19 +386,18 @@ void autonomous(void) {
   FrontR_DT.setVelocity(50, percent);
   BackL_DT.setVelocity(50, percent);
   BackR_DT.setVelocity(50, percent);
-
+  Forklift_L.setVelocity(50, percent);
+  BackForklift_L.setVelocity(100,percent);
+  BackForklift_R.setVelocity(100, percent);
+  Forklift_L.setMaxTorque(100, percent);
   BackForklift_L.setMaxTorque(100, percent);
   BackForklift_R.setMaxTorque(100, percent);
+  Forklift_L.stop(brakeType::hold);
+  Forklift_Hook.stop(brakeType::hold);
 
-
-  FrontLift(100, 600, forward);
-
-  MoveStraight(250, forward);
-
-  FrontLift(50, 610, reverse);
-
-  wait(5, seconds);
-
+  //BackForklift_L.setMaxTorque(100, percent);
+  //BackForklift_R.setMaxTorque(100, percent);
+  
   //Step 1: Go forward to push the blue goal into the other side
   MoveStraight(2500, forward);
 
@@ -259,32 +440,48 @@ void autonomous(void) {
   TurnToTarget(278);
   
   //Go forward to align with third yellow goal
-  MoveStraight(1000, forward);
+  MoveStraight(1010, forward);
   
   //Turn left 90 degrees
   TurnToTarget(185);
   
   //Go forward to push the third yellow goal to the other side
-  MoveStraight(1160, forward);
+  MoveStraight(1130, forward);
 
   //Go backward
-  MoveStraight(1510, reverse);
+  MoveStraight(1460, reverse);
 
   //Turn to face red goal
   TurnToTarget(265);
   
   //Step 4: Move backward to give space for the forklift
-
+  
   MoveStraight(50, reverse);
+  
+  FrontLift(100, 1.5, reverse);
 
-  FrontLift(100, 600, forward);
+  MoveStraight(500, forward);
 
-  MoveStraight(250, forward);
+  Forklift_Hook.spinFor(forward, 100, degrees);
 
-  FrontLift(50, 610, reverse);
+  FrontLift(100, 0.5, forward);
 
-//  BackForklift_L.spinFor(forward, 600, degrees);
-  //BackForklift_R.spinFor(forward, 600, degrees);
+  MoveStraight(200, forward);
+
+  MoveStraight(90, reverse);
+
+  TurnToTarget(185);
+
+  MoveStraight(2730, forward);
+
+  MoveStraight(65, reverse);
+
+  TurnToTarget(95);
+
+  MoveStraight(1600, forward);
+
+
+  //Forklift_Hook.spinFor(forward, 100, degrees);
 }
 
 
