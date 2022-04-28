@@ -382,11 +382,11 @@ void autonomous(void) {
 
   Brain.Screen.print(Inertial.heading(degrees));
 
-  FrontL_DT.setVelocity(50, percent);
-  FrontR_DT.setVelocity(50, percent);
-  BackL_DT.setVelocity(50, percent);
-  BackR_DT.setVelocity(50, percent);
-  Forklift_L.setVelocity(50, percent);
+  FrontL_DT.setVelocity(60, percent);
+  FrontR_DT.setVelocity(60, percent);
+  BackL_DT.setVelocity(60, percent);
+  BackR_DT.setVelocity(60, percent);
+  Forklift_L.setVelocity(100, percent);
   BackForklift_L.setVelocity(100,percent);
   BackForklift_R.setVelocity(100, percent);
   Forklift_L.setMaxTorque(100, percent);
@@ -456,6 +456,13 @@ void autonomous(void) {
   
   //Step 4: Move backward to give space for the forklift
   
+  Forklift_L.setVelocity(50, percent);
+  BackForklift_L.setVelocity(50,percent);
+  BackForklift_R.setVelocity(50, percent);
+  Forklift_L.setMaxTorque(50, percent);
+  BackForklift_L.setMaxTorque(50, percent);
+  BackForklift_R.setMaxTorque(50, percent);
+
   MoveStraight(50, reverse);
   
   FrontLift(100, 1.5, reverse);
@@ -464,24 +471,37 @@ void autonomous(void) {
 
   Forklift_Hook.spinFor(forward, 100, degrees);
 
-  FrontLift(100, 0.5, forward);
+  FrontLift(70, 1.5, forward);
 
   MoveStraight(200, forward);
 
-  MoveStraight(90, reverse);
+  MoveStraight(170, reverse);
 
-  TurnToTarget(185);
-
+  TurnToTarget(175);
+  
   MoveStraight(2730, forward);
 
-  MoveStraight(65, reverse);
+  MoveStraight(30, reverse);
+  
+  TurnToTarget(90);
 
-  TurnToTarget(95);
+  TurnToTarget(115);
 
-  MoveStraight(1600, forward);
+  MoveStraight(30, forward);
 
+  TurnToTarget(90);
+  /*
+  float target = 2000;
+  float current = 0;
+  float increment = 200;
 
-  //Forklift_Hook.spinFor(forward, 100, degrees);
+  while (current <= target) {
+    MoveStraight(increment, forward);
+    current = current + increment;
+    TurnToTarget(90);
+  }
+  */
+  MoveStraight(2000, forward);
 }
 
 
