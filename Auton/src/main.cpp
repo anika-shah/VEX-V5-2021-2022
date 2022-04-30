@@ -80,8 +80,8 @@ void autonomous(void) {
   
   //Go forward
   MoveStraight(625, forward);
-  
-  //Turn right 90 degrees the face the first yellow goal
+  //---------------------------------------------------------------------------------------------------------------------------------------------
+  //Step 2: Turn right 90 degrees the face the first yellow goal
   TurnToTarget(357);
   
   //Step 2: Go forward 1700 degrees forward to push the yellow goal to the other side
@@ -98,7 +98,7 @@ void autonomous(void) {
   
   //Turn right 90 degrees the face the second yellow goal
   TurnToTarget(357);
-
+//------------------------------------------------------------------------------------------------------------------------------------------------
   
   //Step 3: Go forward 1700 degrees forward to push the second yellow goal to the other side
   MoveStraight(1690, forward);
@@ -119,11 +119,11 @@ void autonomous(void) {
   MoveStraight(1130, forward);
 
   //Go backward
-  MoveStraight(1500, reverse);
+  MoveStraight(1520, reverse);
 
   //Turn to face red goal
   TurnToTarget(265);
-  
+  //----------------------------------------------------------------------------------------------------------------------------------------------
   //Step 4: Move backward to give space for the forklift
   
   //Decrease the velocity to 60 to lightly bump the wall
@@ -140,9 +140,9 @@ void autonomous(void) {
 
   //Step 4: Move backward to give space for the forklift
   MoveStraight(50, reverse);
-
+  //---------------------------------------------------------------------------------------------------------------------------------------------
   //Step 5: Lower the forklift to pick up the red goal
-  FrontLift(100, 1.5, reverse);
+  FrontLift(100, 1.4, reverse);
 
   //Step 5: Move forward to get under the red goal
   MoveStraight(500, forward);
@@ -158,7 +158,7 @@ void autonomous(void) {
 
   //Step 5: Turn left 90 degrees to be parallel to the wall
   TurnToTarget(182);
-
+  //-----------------------------------------------------------------------------------------------------------------------------------------------
   //Step 6: Move forward to move the robot to the other side of the field
   MoveStraight(1700, forward);
 
@@ -169,7 +169,7 @@ void autonomous(void) {
   MoveStraight(500, forward);
 
   //Step 6: Lower the forklift to drop the red goal
-  FrontLift(100, 1.5, reverse);
+  FrontLift(100, 1.4, reverse);
 
   //Step 6: Spin the hook to unlatch from the red goal
   Forklift_Hook.spinFor(reverse, 100, degrees);
@@ -182,7 +182,7 @@ void autonomous(void) {
 
   //Step 6: Turn right 90 degrees to be parallel to the wall again
   TurnToTarget(179);
-
+  //---------------------------------------------------------------------------------------------------------------------------------------------
   //Step 7: Go forward until the robot touches the far wall
   MoveStraight(945, forward);
  
@@ -199,7 +199,7 @@ void autonomous(void) {
   TurnToTarget(115);
   MoveStraight(65, forward);
   TurnToTarget(100);
-
+  //---------------------------------------------------------------------------------------------------------------------------------------------
   //Set the velocity to 100 percent
   FrontL_DT.setVelocity(100, percent);
   FrontR_DT.setVelocity(100, percent);

@@ -8,5 +8,5 @@ void FrontLift(int Velocity, double Time, vex::directionType dir) {
   wait(Time, seconds);
   BackForklift_L.stop();
   BackForklift_R.stop();
-  wait(0.5, seconds);
+  wait(0.1, seconds);
 }
