@@ -24,7 +24,7 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
 
     while (true)
     {
-      wait(0.01, seconds);
+      //wait(0.01, seconds);
       if (Inertial.heading(degrees) > target-1 && Inertial.heading(degrees) < target+1)
       {
           break;
@@ -37,7 +37,7 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
     BackL_DT.spinFor(reverse, 2000, degrees, false);
     BackR_DT.spinFor(forward, 2000, degrees, false);
 
-    wait(0.2, seconds);
+    wait(0.1, seconds);
 
     //Setting the target
     float target = Inertial.heading(degrees) - numOfDegrees;
@@ -48,7 +48,7 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
 
     while (true)
     {
-      wait(0.01, seconds);
+      //wait(0.01, seconds);
       if (Inertial.heading(degrees) > target-1 && Inertial.heading(degrees) < target+1)
       {
           break;
@@ -61,10 +61,10 @@ void TurnUsingGyro(int numOfDegrees, vex::turnType dir) {
   BackL_DT.stop();
   BackR_DT.stop();
 
-  FrontL_DT.setVelocity(50, percent);
-  FrontR_DT.setVelocity(50, percent);
-  BackL_DT.setVelocity(50, percent);
-  BackR_DT.setVelocity(50, percent);
+  FrontL_DT.setVelocity(85, percent);
+  FrontR_DT.setVelocity(85, percent);
+  BackL_DT.setVelocity(85, percent);
+  BackR_DT.setVelocity(85, percent);
 }
 
 void TurnToTarget(float target) {
